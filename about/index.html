@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us</title>
+  <!-- CANONICAL CHAIN PROBLEM: points to /about-old/ instead of the final destination -->
+  <link rel="canonical" href="https://bshettiyar.site/about-old/" />
+  <meta name="description" content="About page with a canonical chain issue." />
+  <style>
+    body { font-family: sans-serif; max-width: 800px; margin: 60px auto; padding: 0 20px; }
+    nav a { margin-right: 16px; text-decoration: none; color: #0066cc; }
+    .chain-box { background: #fff8e1; border: 1px solid #f0c040; border-radius: 6px; padding: 16px; margin: 24px 0; font-family: monospace; }
+    .label { font-weight: bold; color: #c00; }
+  </style>
+</head>
+<body>
+  <h1>About Us</h1>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/about-old/">About Old</a>
+    <a href="/about-final/">About Final</a>
+  </nav>
+  <hr />
+  <p>This is <strong>/about/</strong> — the page users and internal links point to.</p>
+
+  <div class="chain-box">
+    <p class="label">🔴 Canonical Chain (broken)</p>
+    <p>
+      <strong>/about/</strong> → canonical: <code>https://bshettiyar.site/about-old/</code><br/>
+      <strong>/about-old/</strong> → canonical: <code>https://bshettiyar.site/about-final/</code><br/>
+      <strong>/about-final/</strong> → canonical: <code>https://bshettiyar.site/about-final/</code> ✓
+    </p>
+    <p>Google sees this page and follows the chain instead of indexing <code>/about/</code> directly.</p>
+  </div>
+
+  <p>Content: About page with a canonical chain issue.</p>
+  <p>Words: 37 &nbsp;|&nbsp; H1: About Us &nbsp;|&nbsp; Inlinks: 2</p>
+</body>
+</html>
