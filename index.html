@@ -6,21 +6,31 @@
   <title>Bhuvan Shettiyar</title>
   <link rel="canonical" href="https://bshettiyar.site/" />
   <style>
-    body { font-family: sans-serif; max-width: 800px; margin: 60px auto; padding: 0 20px; }
-    nav a { margin-right: 16px; text-decoration: none; color: #0066cc; }
-    .badge { display: inline-block; font-size: 11px; background: #fee; color: #c00; border: 1px solid #c00; border-radius: 4px; padding: 2px 6px; margin-left: 8px; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: sans-serif; }
+    .header { padding: 20px 24px 12px; }
+    .header h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
+    .header p { font-size: 0.95rem; color: #333; margin-bottom: 10px; }
+    nav a { color: #0066cc; text-decoration: none; font-size: 0.9rem; }
+    nav a:hover { text-decoration: underline; }
+    nav span { color: #666; margin: 0 4px; }
+    .hero { width: 100%; height: 560px; object-fit: cover; display: block; filter: grayscale(100%); }
   </style>
 </head>
 <body>
-  <h1>Bhuvan Shettiyar</h1>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/about/">About <span class="badge">canonical chain</span></a>
-    <a href="/about-old/">About Old</a>
-    <a href="/about-final/">About Final</a>
-  </nav>
-  <hr />
-  <p>Welcome to the demo site for reproducing SEO canonical chain issues.</p>
-  <p>Click <strong>About</strong> to see the broken canonical chain: <code>/about/ → /about-old/ → /about-final/</code></p>
+  <div class="header">
+    <h1>SEO Test Site</h1>
+    <p>Welcome to the test page. This content loads before JavaScript hydration.</p>
+    <nav>
+      <a href="/about/">About</a><span>|</span>
+      <a href="/about-old/">About (Old)</a><span>|</span>
+      <a href="/about-final/">About (Final)</a><span>|</span>
+      <a href="/contact/">Contact</a><span>|</span>
+      <a href="/services/">Services</a><span>|</span>
+      <a href="/products/">Products</a><span>|</span>
+      <a href="/faq/">FAQ</a>
+    </nav>
+  </div>
+  <img class="hero" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80" alt="Hero" />
 </body>
 </html>

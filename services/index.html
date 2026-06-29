@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us</title>
-  <!-- CANONICAL CHAIN PROBLEM: points to /about-old/ instead of the final destination -->
-  <link rel="canonical" href="https://bshettiyar.site/about-old/" />
-  <meta name="description" content="About page with a canonical chain issue." />
+  <title>Services</title>
+  <!-- CORRECT: self-referencing canonical — this is the final destination -->
+  <link rel="canonical" href="https://bshettiyar.site/services/" />
+  <meta name="description" content="Services page — the true final destination." />
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: sans-serif; }
@@ -21,17 +21,14 @@
 </head>
 <body>
   <div class="header">
-    <h1>About Us</h1>
-    <p>This page has a canonical chain issue — its canonical points to /about-old/ instead of the final destination.</p>
+    <h1>SEO Test Site</h1>
+    <p>This is <strong>/services/</strong> — the true final destination. The canonical on /canonical-redirect/ should point here directly, not via /old-service/.</p>
     <nav>
       <a href="/">Home</a><span>|</span>
       <a href="/about/">About</a><span>|</span>
-      <a href="/about-old/">About (Old)</a><span>|</span>
-      <a href="/about-final/">About (Final)</a><span>|</span>
-      <a href="/contact/">Contact</a><span>|</span>
-      <a href="/services/">Services</a><span>|</span>
-      <a href="/products/">Products</a><span>|</span>
-      <a href="/faq/">FAQ</a>
+      <a href="/canonical-redirect/">Canonical→Redirect</a><span>|</span>
+      <a href="/old-service/">Old Service (redirects)</a><span>|</span>
+      <a href="/services/">Services (final)</a>
     </nav>
   </div>
   <img class="hero" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80" alt="Hero" />
