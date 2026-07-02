@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- PROBLEM: same title as homepage — triggers title_duplicate issue -->
   <title>SEO Test Site</title>
-  <link rel="canonical" href="https://bshettiyar.site/" />
-  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://bshettiyar.site/duplicate-title/" />
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: sans-serif; }
@@ -21,15 +21,12 @@
 <body>
   <div class="header">
     <h1>SEO Test Site</h1>
-    <p>Welcome to the test page. This content loads before JavaScript hydration.</p>
+    <p>This page has the same <strong>&lt;title&gt;SEO Test Site&lt;/title&gt;</strong> as the homepage — triggers title_duplicate issue.</p>
     <nav>
+      <a href="/">Home</a><span>|</span>
       <a href="/about/">About</a><span>|</span>
-      <a href="/about-old/">About (Old)</a><span>|</span>
-      <a href="/about-final/">About (Final)</a><span>|</span>
-      <a href="/contact/">Contact</a><span>|</span>
-      <a href="/services/">Services</a><span>|</span>
-      <a href="/products/">Products</a><span>|</span>
-      <a href="/faq/">FAQ</a>
+      <a href="/duplicate-title/">Duplicate Title</a><span>|</span>
+      <a href="/services/">Services</a>
     </nav>
   </div>
   <img class="hero" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80" alt="Hero" />
