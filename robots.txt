@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-# No Sitemap declared — triggers sitemap_missing issue
+# Sitemap URL returns 404 — triggers sitemap_4xx issue
+Sitemap: https://bshettiyar.site/sitemap-4xx.xml
