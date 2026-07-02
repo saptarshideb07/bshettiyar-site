@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemap referenced but does not exist — triggers sitemap_missing issue
-Sitemap: https://bshettiyar.site/sitemap.xml
+# No Sitemap declared — triggers sitemap_missing issue
