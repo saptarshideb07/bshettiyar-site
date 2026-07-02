@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noindex Page</title>
+  <!-- PROBLEM: page is in sitemap but has noindex — triggers sitemap_noindex -->
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://bshettiyar.site/noindex-page/" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: sans-serif; }
+    .header { padding: 20px 24px 12px; }
+    .header h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
+    .header p { font-size: 0.95rem; color: #333; margin-bottom: 10px; }
+    nav a { color: #0066cc; text-decoration: none; font-size: 0.9rem; }
+    nav a:hover { text-decoration: underline; }
+    nav span { color: #666; margin: 0 4px; }
+    .hero { width: 100%; height: 560px; object-fit: cover; display: block; filter: grayscale(100%); }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>SEO Test Site</h1>
+    <p>This page is listed in sitemap.xml but has <strong>noindex</strong> — Google won't index it even though the sitemap says it should.</p>
+    <nav>
+      <a href="/">Home</a><span>|</span>
+      <a href="/about/">About</a><span>|</span>
+      <a href="/noindex-page/">Noindex Page</a><span>|</span>
+      <a href="/services/">Services</a>
+    </nav>
+  </div>
+  <img class="hero" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80" alt="Hero" />
+</body>
+</html>
