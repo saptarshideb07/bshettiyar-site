@@ -7,6 +7,9 @@
   <title>Welcome to Bhuvan Shettiyar's Official SEO Test Site Where We Test All Kinds of SEO Issues</title>
   <link rel="canonical" href="https://bshettiyar.site/" />
   <meta name="robots" content="noindex, follow" />
+  <!-- PROBLEM: same description as /about/ page — triggers description_duplicate issue -->
+  <meta name="description" content="About page with a canonical chain issue." />
+  <!-- PROBLEM: no twitter card tags — triggers twitter_missing issue -->
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: sans-serif; }
