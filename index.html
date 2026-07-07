@@ -2,9 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <!-- PROBLEM: viewport missing width=device-width — triggers viewport_device_width issue -->
-  <!-- PROBLEM: viewport tag removed — triggers viewport_missing issue -->
-  <meta name="viewport" content="initial-scale=1.0" />
+  <!-- PROBLEM: viewport tag completely removed — triggers viewport_missing issue -->
   <!-- PROBLEM: title is 95 chars — triggers title_long issue -->
   <title>Welcome to Bhuvan Shettiyar's Official SEO Test Site Where We Test All Kinds of SEO Issues</title>
   <link rel="canonical" href="https://bshettiyar.site/" />
@@ -55,6 +53,9 @@
       <!-- PROBLEM: links without trailing slashes — triggers no_trailing_slashes issue -->
       <a href="/no-slash">No Slash 1</a><span>|</span>
       <a href="/another-no-slash">No Slash 2</a><span>|</span>
+      <!-- PROBLEM: URLs with double slashes — triggers double_slash_url issue -->
+      <a href="//about//">Double Slash 1</a><span>|</span>
+      <a href="/services//page">Double Slash 2</a><span>|</span>
       <!-- PROBLEM: external links that return 4xx — triggers extlinks4xx issue -->
       <a href="https://www.example-broken-link-404.com/nonexistent-page">Broken Link 1</a><span>|</span>
       <a href="https://httpstat.us/404">Broken Link 2</a><span>|</span>
