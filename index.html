@@ -11,6 +11,13 @@
   <!-- PROBLEM: description exceeds 160 chars — triggers description_long issue -->
   <meta name="description" content="Welcome to Bhuvan Shettiyar's official SEO test site where we reproduce and test all kinds of SEO issues including canonical chains, missing tags, duplicate content, and much more for research purposes." />
   <!-- PROBLEM: no twitter card tags — triggers twitter_missing issue -->
+  <!-- PROBLEM: CSS file returns 3xx redirect — triggers css3xx issue -->
+  <link rel="stylesheet" href="https://httpstat.us/301" />
+  <!-- PROBLEM: JS file returns 3xx redirect — triggers js3xx issue -->
+  <script src="https://httpstat.us/302"></script>
+  <!-- PROBLEM: invalid hreflang value — triggers hreflang_invalid issue -->
+  <link rel="alternate" hreflang="english" href="https://bshettiyar.site/" />
+  <link rel="alternate" hreflang="esp" href="https://bshettiyar.site/es/" />
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: sans-serif; }
