@@ -21,7 +21,7 @@
 </head>
 <body>
   <div class="header">
-    <h1>SEO Test Site</h1>
+    <!-- PROBLEM: h1 removed — triggers h1_missing issue -->
     <p>Welcome to the test page. This content loads before JavaScript hydration.</p>
     <nav>
       <a href="/about/">About</a><span>|</span>
@@ -30,7 +30,10 @@
       <a href="/contact/">Contact</a><span>|</span>
       <a href="/services/">Services</a><span>|</span>
       <a href="/products/">Products</a><span>|</span>
-      <a href="/faq/">FAQ</a>
+      <a href="/faq/">FAQ</a><span>|</span>
+      <!-- PROBLEM: external links that return 4xx — triggers extlinks4xx issue -->
+      <a href="https://www.example-broken-link-404.com/nonexistent-page">Broken Link 1</a><span>|</span>
+      <a href="https://httpstat.us/404">Broken Link 2</a>
     </nav>
   </div>
   <img class="hero" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80" alt="Hero" />
