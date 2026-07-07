@@ -45,7 +45,10 @@
       <a href="/broken-page/">Broken Internal</a><span>|</span>
       <!-- PROBLEM: external links with no anchor text — triggers extlinks_no_anchor issue -->
       <a href="https://www.wikipedia.org/"></a><span>|</span>
-      <a href="https://www.github.com/"></a>
+      <a href="https://www.github.com/"></a><span>|</span>
+      <!-- PROBLEM: internal links with nofollow — triggers links_nofollow issue -->
+      <a href="/about/" rel="nofollow">About (nofollow)</a><span>|</span>
+      <a href="/services/" rel="nofollow">Services (nofollow)</a>
     </nav>
   </div>
   <img class="hero" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80" alt="Hero" />
