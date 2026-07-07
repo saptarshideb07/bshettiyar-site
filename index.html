@@ -26,7 +26,8 @@
 <body>
   <div class="header">
     <!-- PROBLEM: two h1 tags — triggers h1_duplicate issue -->
-    <h1>SEO Test Site</h1>
+    <!-- PROBLEM: h1 exceeds 70 chars — triggers h1_long issue -->
+    <h1>Welcome to Bhuvan Shettiyar's Official SEO Test Site for Reproducing Issues</h1>
     <h1>Welcome to Bhuvan Shettiyar's SEO Lab</h1>
     <p>Welcome to the test page. This content loads before JavaScript hydration.</p>
     <nav>
@@ -39,7 +40,12 @@
       <a href="/faq/">FAQ</a><span>|</span>
       <!-- PROBLEM: external links that return 4xx — triggers extlinks4xx issue -->
       <a href="https://www.example-broken-link-404.com/nonexistent-page">Broken Link 1</a><span>|</span>
-      <a href="https://httpstat.us/404">Broken Link 2</a>
+      <a href="https://httpstat.us/404">Broken Link 2</a><span>|</span>
+      <!-- PROBLEM: internal link to 4xx page — triggers http4xx issue -->
+      <a href="/broken-page/">Broken Internal</a><span>|</span>
+      <!-- PROBLEM: external links with no anchor text — triggers extlinks_no_anchor issue -->
+      <a href="https://www.wikipedia.org/"></a><span>|</span>
+      <a href="https://www.github.com/"></a>
     </nav>
   </div>
   <img class="hero" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80" alt="Hero" />
