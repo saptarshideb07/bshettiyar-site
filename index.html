@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- PROBLEM: viewport missing width=device-width — triggers viewport_device_width issue -->
+  <!-- PROBLEM: viewport tag removed — triggers viewport_missing issue -->
+  <meta name="viewport" content="initial-scale=1.0" />
   <!-- PROBLEM: title is 95 chars — triggers title_long issue -->
   <title>Welcome to Bhuvan Shettiyar's Official SEO Test Site Where We Test All Kinds of SEO Issues</title>
   <link rel="canonical" href="https://bshettiyar.site/" />
@@ -18,6 +20,11 @@
   <!-- PROBLEM: invalid hreflang value — triggers hreflang_invalid issue -->
   <link rel="alternate" hreflang="english" href="https://bshettiyar.site/" />
   <link rel="alternate" hreflang="esp" href="https://bshettiyar.site/es/" />
+  <!-- PROBLEM: no x-default hreflang — triggers hreflang_xdefault issue -->
+  <!-- PROBLEM: duplicate hreflang for same lang — triggers hreflang_duplicates issue -->
+  <link rel="alternate" hreflang="fr" href="https://bshettiyar.site/fr/" />
+  <link rel="alternate" hreflang="fr" href="https://bshettiyar.site/fr-alt/" />
+  <!-- PROBLEM: hreflang points to /es/ but /es/ has no return hreflang back — triggers hreflang_return issue -->
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: sans-serif; }
@@ -45,6 +52,9 @@
       <a href="/services/">Services</a><span>|</span>
       <a href="/products/">Products</a><span>|</span>
       <a href="/faq/">FAQ</a><span>|</span>
+      <!-- PROBLEM: links without trailing slashes — triggers no_trailing_slashes issue -->
+      <a href="/no-slash">No Slash 1</a><span>|</span>
+      <a href="/another-no-slash">No Slash 2</a><span>|</span>
       <!-- PROBLEM: external links that return 4xx — triggers extlinks4xx issue -->
       <a href="https://www.example-broken-link-404.com/nonexistent-page">Broken Link 1</a><span>|</span>
       <a href="https://httpstat.us/404">Broken Link 2</a><span>|</span>
